@@ -20,6 +20,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <div class="container w-50">
+            <h2 class="text-center my-4">Cose Da Fare</h2>
+
+            <ul class="list-group">
+                <li v-for="(task, i) of tasks" class="list-group-item d-flex justify-content-between align-items-center">
+                    {{task.text}}
+                    <button type="button" @click="removeTask(i)" class="btn-close"></button>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 </body>
 </html>
