@@ -8,11 +8,11 @@ const app = createApp({
             tasks: [
                 {
                     text: 'Fare la lavatrice',
-                    done: true
+                    done: false
                 },
                 {
                     text: 'Fare la spesa',
-                    done: false
+                    done: true
                 },
                 {
                     text: 'Preparare la cena',
