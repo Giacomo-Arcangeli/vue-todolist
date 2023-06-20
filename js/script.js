@@ -5,6 +5,7 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
+            newTask: '',
             tasks: [
                 {
                     text: 'Fare la lavatrice',
@@ -22,7 +23,8 @@ const app = createApp({
                     text: 'Pulire la cucina',
                     done: false
                 },
-            ]
+            ],
+            
         }
     },
     methods: {
@@ -31,6 +33,17 @@ const app = createApp({
             this.tasks = this.tasks.filter((task, i) => {
                 return targetIndex !== i;
             });
+        },
+        
+        // aggiungere una task
+        addTask(){
+            
+            if (!this.newTask.length) return;
+
+            this.tasks.push({ text: this.newTask , done: false});
+
+            this.newTask = '';
+            
         }
     }
 });
